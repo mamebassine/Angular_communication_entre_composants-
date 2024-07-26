@@ -1,0 +1,60 @@
+/* styles.css ou styles.scss */
+
+/* Réduit la largeur des cartes et ajuste le layout */
+.card {
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Éviter que le contenu dépasse */
+    transition: box-shadow 0.3s ease; /* Transition pour ombre */
+    max-width: 300px; /* Largeur maximale de la carte */
+    margin: 10px; /* Marges autour de chaque carte */
+    /* Assurez-vous que les cartes ne se chevauchent pas */
+  }
+  
+  .card-img-top {
+    height: 150px; /* Hauteur réduite pour les images */
+    object-fit: cover; /* Ajuster l'image pour couvrir le conteneur */
+  }
+  
+  .card-body {
+    background-color: #f9f9f9; /* Fond clair pour le corps de la carte */
+    padding: 15px; /* Espacement interne amélioré */
+  }
+  
+  .card-title {
+    font-size: 1rem; /* Taille de police réduite pour le titre */
+    font-weight: bold; /* Gras */
+  }
+  
+  .card-text {
+    color: #555; /* Couleur du texte */
+    font-size: 0.875rem; /* Taille de police réduite pour le texte */
+  }
+  
+  .btn-primary {
+    background-color: #228695; /* Couleur primaire */
+    border-color: #236d86; /* Couleur de la bordure */
+    border-radius: 4px; /* Coins arrondis pour les boutons */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Couleur de survol pour le bouton */
+    border-color: #004085; /* Couleur de bordure survolée */
+    
+  }
+  body{
+    background-color: #26474E;
+  }
+  
+  .container {
+    
+    padding: 20px; /* Espacement interne pour le conteneur */
+  }
+  
+  .row {
+    margin-bottom: 20px; /* Espacement entre les lignes */
+    display: flex; /* Utiliser flexbox pour centrer les cartes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+  }
+  
