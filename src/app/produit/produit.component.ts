@@ -2,6 +2,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailProduitComponent } from '../detail-produit/detail-produit.component';
 
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+// Enregistrez les données locales pour la langue française
+registerLocaleData(localeFr, 'fr');
+
 @Component({
   selector: 'app-produit',
   standalone: true,
