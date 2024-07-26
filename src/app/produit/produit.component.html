@@ -1,11 +1,32 @@
-<div class="container">
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let produit of produits">
+      <div class="card mb-3">
+        <img [src]="produit.image" class="card-img-top" alt="{{ produit.titre }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ produit.titre | uppercase }}</h5>
+          <p class="card-text">{{ produit.prix | currency:'EUR':'symbol':'1.2-2':'fr' }}</p>
+          <p class="card-text">{{ produit.description }}</p>
+          <p class="card-text">Date: {{ produit.date | date:'longDate' }}</p>
+          <button class="btn btn-primary" (click)="afficherDetail(produit)">Voir Détails</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-detail-produit *ngIf="selectedProduit" [produit]="selectedProduit"></app-detail-produit> -->
+
+
+
+<!-- <div class="container">
     <div class="row">
       <div class="col-md-4" *ngFor="let produit of produits">
         <div class="card mb-3">
           <img [src]="produit.image" class="card-img-top" alt="{{ produit.titre }}">
           <div class="card-body">
             <h5 class="card-title">{{ produit.titre | uppercase }}</h5>
-            <!-- <p class="card-text">{{ produit.prix | currency:'EUR':'symbol':'1.2-2' }}</p> -->
+             <p class="card-text">{{ produit.prix | currency:'EUR':'symbol':'1.2-2' }}</p> 
 
             <p class="card-text">{{ produit.prix | currency:'EUR':'symbol':'1.2-2':'fr' }}</p>
 
@@ -16,6 +37,33 @@
     </div>
   </div>
   
-  <app-detail-produit *ngIf="selectedProduit" [produit]="selectedProduit"></app-detail-produit>
+  <app-detail-produit *ngIf="selectedProduit" [produit]="selectedProduit"></app-detail-produit> -->
    
+
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let produit of produits">
+      <div class="card mb-3">
+        <img [src]="produit.image" class="card-img-top" alt="{{ produit.titre }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ produit.titre | uppercase }}</h5>
+          <p class="card-text">{{ produit.prix | currency:'EUR':'symbol':'1.2-2':'fr' }}</p>
+          <button class="btn btn-primary" (click)="afficherDetail(produit)">Voir Détails</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-detail-produit *ngIf="selectedProduit" [produit]="selectedProduit"></app-detail-produit>
+
+<div *ngIf="selectedProduit">
+  <h2>{{ selectedProduit.titre }}</h2>
+  <img [src]="selectedProduit.image" alt="{{ selectedProduit.titre }}" style="width: 100%; max-width: 300px;">
+  <p>Prix: {{ selectedProduit.prix | currency:'EUR':'symbol':'1.2-2':'fr' }}</p>
+  <p>Description: {{ selectedProduit.description }}</p>
+  <p>Date: {{ selectedProduit.date | date:'longDate':'fr' }}</p>
+</div>
 
