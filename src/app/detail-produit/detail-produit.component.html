@@ -1,1 +1,17 @@
-<p>detail-produit works!</p>
+<!-- <!-- src/app/detail-produit/detail-produit.component.html -->
+
+<!-- <div *ngIf="produit">
+    <h2>{{ produit.titre | uppercase }}</h2>
+    <p>Prix : {{ produit.prix | currency:'EUR':true:'1.2-2' }}</p>
+  </div> -->
+  
+
+  <!-- detail-produit.component.html -->
+
+<div *ngIf="produit">
+    <h2>{{ produit.titre }}</h2>
+    <img [src]="produit.image" alt="{{ produit.titre }}" style="width: 100%; max-width: 300px;">
+    <p>Prix: {{ produit.prix | currency:'EUR':true:'1.2-2' }}</p>
+    <!-- Ajoutez d'autres détails du produit ici -->
+  </div>
+  
