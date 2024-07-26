@@ -15,9 +15,13 @@
 
 
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ProduitComponent } from './produit/produit.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, ProduitComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
